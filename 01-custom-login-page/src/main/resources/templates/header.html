@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.css}" />
+</head>
+<body>
+    <!-- th:fragment 定义需要引入的代码块，该div包含的内容即为引用的公共内容 -->
+    <div th:fragment="myheader">
+        <nav aria-label="breadcrumb" style="position: relative;">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <p th:text="${title}"></p>
+                </li>
+                <li style="position: absolute; right: 70px;">
+                    <form th:action="@{/logout}" method="post">
+                        <button type="submit" class="btn btn-outline-primary btn-sm">登出</button>
+                    </form>
+
+                </li>
+            </ol>
+        </nav>
+    </div>
+</body>
+</html>
