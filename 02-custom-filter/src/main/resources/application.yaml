@@ -1,0 +1,29 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /security
+
+spring:
+  thymeleaf:
+    ##指定模板所在的目录
+    prefix: classpath:/templates/
+    ##检查模板路径是否存在
+    check-template-location: true
+    ##是否缓存
+    cache: false
+    ##后缀
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+
+
+##配置用户信息，模拟从数据库中读取用户的情况
+users:
+   userList[0]:
+      username: admin
+      password: admin
+      role: ROLE_ADMIN
+   userList[1]:
+      username: user
+      password: user
+      role: ROLE_USER

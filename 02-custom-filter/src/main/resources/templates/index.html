@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.css}" />
+</head>
+<body>
+    <!--引入头部信息-->
+    <div th:replace="header::myheader" ></div>
+    <p class="card-text" th:text="${content}"></p>
+    <a class="nav-link" th:href="@{/admin/admin}">进入管理员页（/admin/admin）</a>
+    <a class="nav-link" th:href="@{/user/user}">进入用户页（/user/user）</a>
+</body>
+</html>
